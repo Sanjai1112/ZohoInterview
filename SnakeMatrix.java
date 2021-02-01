@@ -16,8 +16,9 @@ public class SnakeMatrix {
     }
 
     private static int printGivenLimitLineInMatrix(int counter,int startEmptySpaces, int endEmptySpaces, int n){
-        boolean isDecrement = counter % 2 == 0 ? true :false;
-        int temp = isDecrement ? counter + n: counter;
+        boolean isDecrement = endEmptySpaces % 2 == 0 ? false : true;
+        int temp ;
+        temp = counter = isDecrement ? counter + n - 1 : counter;
         printGivenLimitEmptySpaces(startEmptySpaces);
         while(n >= 1){
             System.out.print(counter+" ");
@@ -25,7 +26,7 @@ public class SnakeMatrix {
             n--;
         }
         printGivenLimitEmptySpaces(endEmptySpaces);
-        return isDecrement ? temp : counter;
+        return isDecrement ? ++temp : counter;
     }
 
     private static void printGivenLimitEmptySpaces(int n){
