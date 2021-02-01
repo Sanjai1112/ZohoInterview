@@ -10,7 +10,6 @@ public class SnakeMatrix2 {
 
         while(temp >=1){
             counter = printGivenSankeLine(counter, n, decider, firstEmptySpaces, endEmptySpaces);
-            System.out.println();
             decider *= -1;
             firstEmptySpaces--;
             endEmptySpaces++;
@@ -26,7 +25,7 @@ public class SnakeMatrix2 {
             numberString +=counter +" ";
             temp--;
         }
-        System.out.print( 
+        System.out.println( 
             getGivenNumOfEmptySpaces(firstEmptySpaces) + 
             numberString.trim() + 
             getGivenNumOfEmptySpaces(endEmptySpaces)
